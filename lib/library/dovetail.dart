@@ -6,7 +6,7 @@ class Dovetail extends StatelessWidget {
   final List<DovePin> children;
   final int columnCount;
 
-  Dovetail({Key key, @required this.columnCount, this.children}) : super(key: key);
+  Dovetail({Key? key, required this.columnCount, required this.children}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -44,7 +44,7 @@ class DovePin extends StatelessWidget {
   final int flex;
   final Widget child;
 
-  const DovePin({Key key, this.flex, this.child}) : super(key: key);
+  const DovePin({ Key? key, required this.flex, required this.child}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

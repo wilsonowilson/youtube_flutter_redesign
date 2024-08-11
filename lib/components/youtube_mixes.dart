@@ -5,7 +5,7 @@ import 'package:youtube_flutter_redesign/model/core/mix.dart';
 
 class YoutubeMixes extends StatelessWidget {
   const YoutubeMixes({
-    Key key,
+     Key? key,
   }) : super(key: key);
 
   @override

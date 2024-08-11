@@ -1,10 +1,10 @@
 import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
+// Remove the unnecessary import statement
 import 'package:flutter/material.dart';
 import 'package:youtube_flutter_redesign/components/popular_channels.dart';
 import 'package:youtube_flutter_redesign/components/recommended_videos.dart';
-import 'package:youtube_flutter_redesign/components/search_bar.dart';
+import 'package:youtube_flutter_redesign/components/search_bar.dart' as YTSearchBar;
 import 'package:youtube_flutter_redesign/components/side_bar.dart';
 import 'package:youtube_flutter_redesign/components/youtube_mixes.dart';
 import 'package:youtube_flutter_redesign/library/dovetail.dart';
@@ -75,7 +75,7 @@ class Home extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SearchBar(),
+                  YTSearchBar.SearchBar(),
                   RecommendedVideos(),
                   SizedBox(height: 60),
                   Row(

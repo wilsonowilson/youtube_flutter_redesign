@@ -76,10 +76,17 @@ class SideBar extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   width: double.maxFinite,
                   height: 50,
-                  child: FlatButton(
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12)),
-                      color: Color.fromRGBO(255, 0, 0, 1),
+                  child: TextButton(
+                      style: ButtonStyle(
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                              ),
+                          ),
+                          backgroundColor: MaterialStateProperty.all<Color>(
+                              Color.fromRGBO(255, 0, 0, 1),
+                          ),
+                      ),
                       onPressed: () {},
                       child: Text(
                         "UPLOAD VIDEO",

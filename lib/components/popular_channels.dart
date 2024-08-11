@@ -3,7 +3,7 @@ import 'package:youtube_flutter_redesign/model/core/channel.dart';
 
 class PopularChannels extends StatelessWidget {
   const PopularChannels({
-    Key key,
+     Key? key,
   }) : super(key: key);
 
   @override
@@ -79,19 +79,26 @@ class PopularChannels extends StatelessWidget {
                         SizedBox(
                           width: 110,
                           height: 30,
-                          child: FlatButton(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(7)),
-                              color: Color.fromRGBO(255, 0, 0, 1),
-                              onPressed: () {},
-                              child: Text(
-                                "SUBSCRIBE",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 2),
-                              )),
+                          child: TextButton(
+                            style: ButtonStyle(
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(7),
+                              ),
+                            ),
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                              Color.fromRGBO(255, 0, 0, 1),
+                            ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                            "SUBSCRIBE",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2),
+                            )),
                         ),
                       ],
                     ),
@@ -103,3 +110,4 @@ class PopularChannels extends StatelessWidget {
     );
   }
 }
+

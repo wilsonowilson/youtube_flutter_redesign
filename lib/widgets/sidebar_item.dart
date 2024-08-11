@@ -5,7 +5,7 @@ class SidebarItem extends StatelessWidget {
   final String title;
   final bool selected;
 
-  const SidebarItem({Key key, this.icon, this.title, this.selected = false})
+  const SidebarItem({ Key? key, required this.icon, required this.title, this.selected = false})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
